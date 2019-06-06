@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>ДОМАЩКА</title>
+</head>
+<body>
+	<div class="form">
+		<div class="box">
+			<h3>Введите Фамилию</h3>
+			<input class="fname">
+		</div>
+		<div class="box box2">
+			<h3>Введите Имя</h3>
+			<input class="name">
+		</div>
+		<div class="box box3">
+			<h3>Введите Очество</h3>
+			<input class="ochest">
+		</div>
+		<div class="box">
+			<button class="btn">
+				Согласен
+			</button>
+		</div>
+	</div>
+	<div class="block">
+		<h3 class="gh3">
+			
+		</h3>
+		<h3 class="gh4">
+			
+		</h3>
+		<img src="wow.gif">
+	</div>
+	<button class="hgn">
+		<a href="https://www.youtube.com/watch?v=Jg6NOTpfPFY">
+			CИКРЕТКА
+		</a>
+	</button>
+	<button class="hgh">
+		Проход к сикретке
+	</button>
+	<script>
+		let btn = document.querySelector('.btn');
+		let fname = document.querySelector('.fname');
+		let name = document.querySelector('.name');
+		let och = document.querySelector('.ochest');
+		let form = document.querySelector('.form');
+		let gh3 = document.querySelector('.gh3');
+		let gh4 = document.querySelector('.gh4');
+		let box = document.querySelector('.block');
+		let hgn = document.querySelector('.hgn');
+		let hgh = document.querySelector('.hgh');
+		let box2 = document.querySelector('.box');
+		let box3 = document.querySelector('.box2');
+		let box4 = document.querySelector('.box3');
+		let score = 1;
+		let gg = ""
+		hgh.onclick = function(){
+			hgh.style.display = "none"
+			score = 29
+			box2.style.display = "none"
+			box3.style.display = "none"
+			box4.style.display = "none"
+		}
+		btn.onclick = function(){
+			if(fname.value == "" && och.value == "" && name.value == ""){
+				score = score + 1
+				if(score == 30){
+					hgn.style.display = "block"
+					form.style.display = "none"
+				}
+				else{
+					alert("Напиши и всё будет хорошо")
+				}
+		}
+
+			else{
+				if(score == 2){
+					gg = "СО "
+				}
+				else{
+					gg = "С "
+				}
+				form.style.display = "none"
+				box.style.display = "block"
+				gh4.innerHTML = "ДОБРО ПОЖАЛОВАТЬ " + fname.value + " " + name.value + " " + och.value + " В НАРНИЮ"
+				gh3.innerHTML = "ДА ЛАДНО ТЫ ВОШЁЛ " + gg + score + " РАЗА ВАУ"
+			}
+
+		}
+		
+	</script>
+</body>
+</html>
